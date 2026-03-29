@@ -13,7 +13,7 @@ void main() {
   }
 
   // Decrease kindness to negative
-  Pet pet1 = PET_HOME.elementAt(0);
+  Pet pet1 = PET_HOME[0];
   pet1.checkKindness(); // 500
   pet1.kick(times: 6); // -100*6 = -600
   pet1.checkKindness(); // -100
@@ -21,7 +21,7 @@ void main() {
   print('\n'); // line break
 
   // Increase kindness over 1000
-  Pet pet2 = PET_HOME.elementAt(1);
+  Pet pet2 = PET_HOME[1];
   pet2.checkKindness(); // 0
   pet2.feed(Food.meat, times: 3); // 500*3 = 1500
   pet2.checkKindness(); // 1500
