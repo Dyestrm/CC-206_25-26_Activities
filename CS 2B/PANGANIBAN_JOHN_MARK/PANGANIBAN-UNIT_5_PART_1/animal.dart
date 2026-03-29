@@ -4,9 +4,11 @@ class Animal {
   String dob; // date of birth
   int numLegs; // number of legs
 
+  // CONCEPT USED (CU): Constructor Shorthand
   Animal (this.name, this.kingdom, this.dob, this.numLegs) {}
 
   void walk(Direction direction) {
+    // CONCEPT USED (CU): Conditionals
     if (this.numLegs <= 0) {
       print("${this.name} can't walk because it has no legs");
     } else {
@@ -15,6 +17,7 @@ class Animal {
   }
 
   void displayInfo() {
+    // CONCEPT USED (CU): Multiline Strings
     print("""
     ${this.name}'s Information:
       - Kingdom: ${this.kingdom}
@@ -26,6 +29,8 @@ class Animal {
 
 class AnimalBuilder {
 
+  // CONCEPT USED (CU): List
+  // CONCEPT USED (CU): Big Arrow
   List<Animal> buildFiveAnimals() => [
     Animal('Shark', 'Animalia', '1999', 0),
     Animal('Dog', 'Animalia', '1998', 4),

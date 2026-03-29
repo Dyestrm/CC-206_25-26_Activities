@@ -3,8 +3,10 @@ class Pet {
   int kindness = 0;
 
   Pet(this.nickname) { this.kindness = 500; }
+  // CONCEPT USED (CU): Named Constructor
   Pet.noNickName(); 
 
+  // CONCEPT USED (CU): Named Function Parameter
   void kick({int times = 1}) { 
     int kindnessBoost = 100;
     int totalBoosted = 0;
