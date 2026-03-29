@@ -1,5 +1,5 @@
 class Pet {
-  String nickname = "";
+  String nickname = "Pet";
   int kindness = 0;
 
   Pet(this.nickname) { this.kindness = 500; }
