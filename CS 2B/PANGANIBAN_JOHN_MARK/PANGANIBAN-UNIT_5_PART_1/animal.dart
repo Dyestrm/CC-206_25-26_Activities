@@ -6,18 +6,15 @@ class Animal {
 
   Animal (this.name, this.kingdom, this.dob, this.numLegs) {}
 
-  void walk(String direction) {
-    // outputs the name and the direction its walking towards
-    // outputs it can't walk if no legs
+  void walk(Direction direction) {
     if (this.numLegs <= 0) {
-      print("${this.name} can't walk");
+      print("${this.name} can't walk because it has no legs");
     } else {
-      print("${this.name} is walking $direction");
+      print("${this.name} is walking ${direction.name}");
     }
   }
 
   void displayInfo() {
-    // outputs summary of Animal's information
     print("""
     ${this.name}'s Information:
       - Kingdom: ${this.kingdom}
@@ -36,6 +33,7 @@ class AnimalBuilder {
     Animal('Eagle', 'Animalia', '2001', 2),
     Animal('Snake', 'Animalia', '2000', 0),
   ];
+}
 
 enum Direction {
   north("North"),
