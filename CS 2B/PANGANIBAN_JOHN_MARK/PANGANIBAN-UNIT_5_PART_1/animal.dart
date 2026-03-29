@@ -5,7 +5,9 @@ class Animal {
   int numLegs; // number of legs
 
   // CONCEPT USED (CU): Constructor Shorthand
-  Animal (this.name, this.kingdom, this.dob, this.numLegs);
+  Animal (this.name, this.kingdom, this.dob, this.numLegs) {
+    if (numLegs < 0) { numLegs = 0; }
+  }
 
   void walk(Direction direction) {
     // CONCEPT USED (CU): Conditionals
@@ -16,15 +18,15 @@ class Animal {
     }
   }
 
-  void displayInfo() {
-    // CONCEPT USED (CU): Multiline Strings
-    print("""
+  // CONCEPT USED (CU): Multiline Strings
+  String displayInfo() =>
+    """
     $name's Information:
       - Kingdom: $kingdom
       - Date of Birth: $dob
       - Number of Legs: $numLegs
-    """);
-  }
+    """;
+  
 }
 
 class AnimalBuilder {

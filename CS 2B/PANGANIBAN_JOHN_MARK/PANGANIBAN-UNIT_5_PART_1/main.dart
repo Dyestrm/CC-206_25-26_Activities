@@ -9,7 +9,7 @@ void main() {
   // CONCEPT USED (CU): Looping
   for (Animal animal in ZOO) {
     animal.walk(Direction.north);
-    animal.displayInfo();
+    print(animal.displayInfo());
   }
 
   // Decrease kindness to negative
