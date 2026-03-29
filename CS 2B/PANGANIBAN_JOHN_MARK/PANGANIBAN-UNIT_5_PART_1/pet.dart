@@ -31,6 +31,10 @@ class Pet {
     kindness += food.kindnessBoost; 
     print('$nickname was fed with ${food.name}. Kindness increased by ${food.kindnessBoost}');
   }
+
+  void checkKindness() {
+    print("${nickname}'s kindness level is at $kindness");
+  }
 }
 
 class PetBuilder {
