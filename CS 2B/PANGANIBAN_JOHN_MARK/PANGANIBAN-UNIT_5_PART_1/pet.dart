@@ -27,9 +27,14 @@ class Pet {
     }
   }
 
-  void feed(Food food) { 
-    kindness += food.kindnessBoost; 
-    print('$nickname was fed with ${food.name}. Kindness increased by ${food.kindnessBoost}');
+  void feed(Food food, {int times = 1}) {
+    int totalBoosted = 0; 
+    for (var i = 0; i < times; i++) {
+      totalBoosted += food.kindnessBoost; 
+    }
+    
+    kindness += totalBoosted;
+    print('$nickname was fed with ${food.name} $times times. Kindness increased by $totalBoosted');
   }
 
   void checkKindness() {
