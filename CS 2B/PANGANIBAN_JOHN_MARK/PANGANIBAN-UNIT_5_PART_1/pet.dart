@@ -9,19 +9,15 @@ class Pet {
   // CONCEPT USED (CU): Named Function Parameter
   void kick({int times = 1}) { 
     int kindnessBoost = 100;
-    int totalBoosted = 0;
+    int totalBoosted = kindnessBoost * times;
+    kindness -= totalBoosted;
 
-    for (var i = 0; i < times; i++) {
-      totalBoosted += kindnessBoost;      
-    }
-    
-    this.kindness -= totalBoosted;
     print('You have kicked $nickname $times times. Kindness decreased by $totalBoosted'); 
   }
 
   void pet() {
-    if (this.kindness < 0) {
-      print('Failed to pet ${nickname}. Kindness is at $kindness');
+    if (kindness < 0) {
+      print('Failed to pet $nickname. Kindness is at $kindness');
     } else {
       int kindnessBoost = 250;
       kindness += kindnessBoost;
@@ -30,17 +26,14 @@ class Pet {
   }
 
   void feed(Food food, {int times = 1}) {
-    int totalBoosted = 0; 
-    for (var i = 0; i < times; i++) {
-      totalBoosted += food.kindnessBoost; 
-    }
-    
+    int totalBoosted = food.kindnessBoost * times; 
     kindness += totalBoosted;
+    
     print('$nickname was fed with ${food.name} $times times. Kindness increased by $totalBoosted');
   }
 
   void checkKindness() {
-    print("${nickname}'s kindness level is at $kindness");
+    print("$nickname's kindness level is at $kindness");
   }
 }
 

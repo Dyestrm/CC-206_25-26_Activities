@@ -3,8 +3,8 @@ import 'pet.dart';
 
 void main() {
   // Animal and Pet information are stored in the builder classes
-  List<Animal> ZOO = AnimalBuilder().buildFiveAnimals();
-  List<Pet> PET_HOME = PetBuilder().buildThreePets();
+  final List<Animal> ZOO = AnimalBuilder().buildFiveAnimals();
+  final List<Pet> PET_HOME = PetBuilder().buildThreePets();
 
   // CONCEPT USED (CU): Looping
   for (Animal animal in ZOO) {

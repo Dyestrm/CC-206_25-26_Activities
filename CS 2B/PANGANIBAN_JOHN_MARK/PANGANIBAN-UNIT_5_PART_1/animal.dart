@@ -5,24 +5,24 @@ class Animal {
   int numLegs; // number of legs
 
   // CONCEPT USED (CU): Constructor Shorthand
-  Animal (this.name, this.kingdom, this.dob, this.numLegs) {}
+  Animal (this.name, this.kingdom, this.dob, this.numLegs);
 
   void walk(Direction direction) {
     // CONCEPT USED (CU): Conditionals
-    if (this.numLegs <= 0) {
-      print("${this.name} can't walk because it has no legs");
+    if (numLegs <= 0) {
+      print("$name can't walk because it has no legs");
     } else {
-      print("${this.name} is walking ${direction.name}");
+      print("$name is walking ${direction.name}");
     }
   }
 
   void displayInfo() {
     // CONCEPT USED (CU): Multiline Strings
     print("""
-    ${this.name}'s Information:
-      - Kingdom: ${this.kingdom}
-      - Date of Birth: ${this.dob}
-      - Number of Legs: ${this.numLegs}
+    $name's Information:
+      - Kingdom: $kingdom
+      - Date of Birth: $dob
+      - Number of Legs: $numLegs
     """);
   }
 }
