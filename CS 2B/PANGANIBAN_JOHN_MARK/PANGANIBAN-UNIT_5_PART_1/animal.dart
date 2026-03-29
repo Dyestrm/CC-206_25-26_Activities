@@ -9,10 +9,21 @@ class Animal {
   void walk(String direction) {
     // outputs the name and the direction its walking towards
     // outputs it can't walk if no legs
+    if (this.numLegs <= 0) {
+      print("${this.name} can't walk");
+    } else {
+      print("${this.name} is walking $direction");
+    }
   }
 
   void displayInfo() {
     // outputs summary of Animal's information
+    print("""
+    ${this.name}'s Information:
+      - Kingdom: ${this.kingdom}
+      - Date of Birth: ${this.dob}
+      - Number of Legs: ${this.numLegs}
+    """);
   }
 }
 
