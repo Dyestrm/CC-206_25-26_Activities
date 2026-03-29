@@ -5,10 +5,16 @@ class Pet {
   Pet(this.nickname) { this.kindness = 500; }
   Pet.noNickName(); 
 
-  void kick() { 
+  void kick({int times = 1}) { 
     int kindnessBoost = 100;
-    this.kindness -= kindnessBoost;
-    print('Do not kick $nickname. Kindness decreased by $kindnessBoost'); 
+    int totalBoosted = 0;
+
+    for (var i = 0; i < times; i++) {
+      totalBoosted += kindnessBoost;      
+    }
+    
+    this.kindness -= totalBoosted;
+    print('You have kicked $nickname $times times. Kindness decreased by $totalBoosted'); 
   }
 
   void pet() {
