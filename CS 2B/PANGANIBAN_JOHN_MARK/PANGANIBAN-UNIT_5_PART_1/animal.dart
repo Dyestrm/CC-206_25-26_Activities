@@ -36,4 +36,13 @@ class AnimalBuilder {
     Animal('Eagle', 'Animalia', '2001', 2),
     Animal('Snake', 'Animalia', '2000', 0),
   ];
+
+enum Direction {
+  north("North"),
+  south("South"),
+  west("West"),
+  east("East");
+
+  final String name;
+  const Direction(this.name);
 }
